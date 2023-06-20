@@ -1,3 +1,167 @@
-// Place all the styles related to the preparation controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.wrapper {
+  display: flex;
+}
+.side-bar {
+  background-color: #253141;
+  width: 250px;
+  height: 100vh;
+}
+
+.side-bar-header {
+  height: 80px;
+  padding: 0 20px;
+  background-color: #253141;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-name a{
+  font-size: 30px;
+  color: #FAFAFA;
+  text-decoration: none;
+}
+
+.create-room a{
+  font-size: 10px;
+  border: 1px solid lightblue;
+  padding: 14px;
+  color: deepskyblue;
+  text-decoration: none;
+}
+
+.menus {
+  background-color: #2F3E51;
+  height: 218px;
+  padding: 30px 25px;
+}
+
+.input_menus {
+  background-color: #2F3E51;
+  height: 190px;
+  padding: 27px 25px;
+}
+
+.user_menus {
+  background-color: #2F3E51;
+  height: calc(100vh - 508px);
+  padding: 27px 25px;
+}
+
+.menu {
+  padding: 5px 0 25px;
+}
+
+.menu-name a {
+  text-decoration: none;
+  color: white;
+}
+
+.chat {
+  background-color: #FFFFFF;
+  width: calc(100vw - 300px);
+}
+
+.display-header {
+  height: 80px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-title {
+  color: #333;
+  font-size: 20px;
+  margin-top: 36px;
+}
+
+.header-button {
+  margin-top: 40px;
+}
+
+.header-button a {
+  text-decoration: none;
+  border: 1px solid darkred;
+  color: darkred;
+  padding: 20px;
+}
+
+.messages {
+  background-color: #FAFAFA;
+  height: calc(100vh - 100px - 90px);
+  padding: 46px 40px 0;
+  overflow: scroll;
+}
+
+.message {
+  margin: 10px 0 0 0;
+}
+
+.upper-message{
+  display: flex;
+}
+
+.message-user {
+  color: #434a54;
+  font-size: 16px;
+}
+
+.message-date {
+  color: #999;
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.lower-message {
+  margin-top: 10px;
+}
+
+.message-content {
+  color: #434a54;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.form {
+  background-color: #DDDDDD;
+  height: 90px;
+  padding: 20px 40px;
+  display: flex;
+}
+
+.form-input {
+  background-color: white;
+  display: flex;
+  width: 100%;
+}
+
+.form-message {
+  border: none;
+  height: 50px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.form-submit {
+  background-color: #38AEF0;
+  border: none;
+  color: white;
+  font-size: 16px;
+  height: 50px;
+  margin-left: 15px;
+  padding: 0 20px;
+}
+
+.form-image {
+  font-size: 12px;
+  background-color: lightblue;
+  color: white;
+  padding: 12px;
+  width: 60px;
+  margin: 5px 10px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
