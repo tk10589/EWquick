@@ -1,25 +1,34 @@
 .wrapper {
+  width: 250px;
   display: flex;
 }
 .side-bar {
-  background-color: #253141;
+  background-color: #E8F0FB;
   width: 250px;
   height: 100vh;
+  float: left;
 }
 
 .side-bar-header {
   height: 80px;
+  width: 210px;
   padding: 0 20px;
-  background-color: #253141;
+  background-color: #E6E6E6;
   display: flex;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   align-items: center;
 }
 
 .header-name a{
   font-size: 30px;
-  color: #FAFAFA;
+  color: #000000;
   text-decoration: none;
+}
+
+.main_screen {
+
+  padding: 30px;
+  color: #ffffff;
 }
 
 .create-room a{
@@ -31,19 +40,19 @@
 }
 
 .menus {
-  background-color: #2F3E51;
+  background-color: #363636;
   height: 218px;
   padding: 30px 25px;
 }
 
 .input_menus {
-  background-color: #2F3E51;
+  background-color: #363636;
   height: 190px;
   padding: 27px 25px;
 }
 
 .user_menus {
-  background-color: #2F3E51;
+  background-color: #363636;
   height: calc(100vh - 508px);
   padding: 27px 25px;
 }
@@ -57,16 +66,16 @@
   color: white;
 }
 
-.chat {
+.user_name_header {
   background-color: #FFFFFF;
   width: calc(100vw - 300px);
 }
 
 .display-header {
+  background-color: #E8F0FB;
   height: 80px;
-  padding: 0 40px;
+  padding: 0 0px;
   display: flex;
-  justify-content: space-between;
 }
 
 .header-title {
@@ -87,10 +96,7 @@
 }
 
 .messages {
-  background-color: #FAFAFA;
-  height: calc(100vh - 100px - 90px);
-  padding: 46px 40px 0;
-  overflow: scroll;
+  padding: 0px 0px 0;
 }
 
 .message {
