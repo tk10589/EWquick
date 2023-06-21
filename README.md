@@ -22,11 +22,11 @@ rails _6.0.0_
 | Column           | Type       | Options                        |
 | ---------------- | ---------- | ------------------------------ |
 | my_submitter     | string     | null: false                    |
-| my_director      | text       | null: false                    |
-| my_company       | integer    | null: false                    |
-| my_Address       | integer    | null: false                    |
-| my_phone_number  | integer    | null: false                    |
-| my_fax_number    | integer    | null: false                    |
+| my_director      | string     | null: false                    |
+| my_company       | string     | null: false                    |
+| my_Address       | string     | null: false                    |
+| my_phone_number  | string     | null: false                    |
+| my_fax_number    | string     | null: false                    |
 | user_id          | references | null: false, foreign_key: true |
 
 ### Association

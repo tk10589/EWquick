@@ -11,6 +11,82 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="display-header">
+      <div class="side-bar-header">
+        <div class="header-name">
+          <a href="#">EWquick</a>
+        </div>
+      </div>
+      <div class="left-header">
+        <div class="header-title">
+          <% if user_signed_in? %>
+            <%= link_to current_user.nickname, root_path, class: "user-nickname" %>
+          <% end %>
+        </div>
+      </div>
+    </header>
+    <%# メインメニュー関係 %>
+    <%# <div class="wrapper">#%>
+    <div class="side-bar">
+      <div class="menus">
+        <div class="menu">
+          <div class="menu-name">
+            <a href="#">ホーム</a>
+          </div>
+        </div>
+        <div class="menu">
+          <div class="menu-name">
+            <a href="#">見積書</a>
+          </div>
+        </div>
+      </div>
+<%# 見積補助項目入力関係 %>
+      <div class="input_menus">
+        <div class="menu">
+          <div class="menu-name">
+            <%= link_to "作成者", new_preparer_path, method: :get, class: "item-red-btn" %>
+          </div>
+        </div>
+        <div class="menu">
+          <div class="menu-name">
+            <a href="#">取引先</a>
+          </div>
+        </div>
+        <div class="menu">
+          <div class="menu-name">
+            <a href="#">品目管理</a>
+          </div>
+        </div>
+      </div>
+    <%# ユーザー管理関係 %>
+      <div class="user_menus">
+        <div class="menu">
+          <div class="menu-name">
+           <% if user_signed_in? %>
+            
+           <% else %>
+            <%= link_to "新規登録", new_user_registration_path, class: "post" %>
+          <% end %>
+          </div>
+        </div>
+        <div class="menu">
+          <div class="menu-name">
+            <a href="#">マイページ</a>
+          </div>
+        </div>
+        <div class="menu">
+          <div class="menu-name">
+            <% if user_signed_in? %>
+              <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
+            <% else %>
+              <%= link_to "ログイン", new_user_session_path, class: "post" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main_screen">
+      <%= yield %>
+    </div>
   </body>
 </html>
