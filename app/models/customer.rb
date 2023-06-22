@@ -1,5 +1,6 @@
 class Customer < ApplicationRecord
   belongs_to :user
+  has_many :items
 
   validates :cust_contact, presence: true
   validates :cust_director, presence: true

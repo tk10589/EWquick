@@ -1,5 +1,6 @@
 class Preparer < ApplicationRecord
   belongs_to :user
+  has_many :items
 
   validates :my_submitter, presence: true
   validates :my_director, presence: true
