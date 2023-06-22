@@ -1,0 +1,19 @@
+<%= form_with model: @customer, url: "/customers", class: 'registration-main', local: true do |f| %>
+
+<div class='form-wrap'>
+  <div class='form-header'>
+    <div class='form-header-text'>
+      取引先情報
+    </div>
+  </div>
+
+      <div class="user__wrapper">
+        <%= render partial: 'customers/customer' %>
+      </div>
+
+  <div class='new-btn'>
+    <%= link_to "取引先新規登録", new_customer_path, method: :get, class: "new-red-btn" %>
+  </div>
+
+</div>
+<% end %>

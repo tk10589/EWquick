@@ -27,7 +27,7 @@ rails _6.0.0_
 | my_Address       | string     | null: false                    |
 | my_phone_number  | string     | null: false                    |
 | my_fax_number    | string     | null: false                    |
-| user_id          | references | null: false, foreign_key: true |
+| user             | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -44,7 +44,7 @@ rails _6.0.0_
 | cust_Address      | integer    | null: false                    |
 | cust_phone_number | integer    | null: false                    |
 | cust_fax_number   | integer    | null: false                    |
-| preparer          | references | null: false, foreign_key: true |
+| user              | references | null: false, foreign_key: true |
 
 ### Association
 

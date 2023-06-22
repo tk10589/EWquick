@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th class="table__col">会社名</th>
+      <th class="table__col">営業担当者</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @customers.each do |customer| %>
+      <tr>
+        <td class="table__col1">
+          <%= link_to customer.cust_company, edit_customer_path(customer.id), method: :get %>
+        </td>
+        <td class="table__col2">
+          <%= link_to customer.cust_contact, edit_customer_path(customer.id), method: :get %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
