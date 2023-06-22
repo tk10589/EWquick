@@ -1,0 +1,60 @@
+<%= form_with model: @customer, url: "/customers", class: 'registration-main', local: true do |f| %>
+
+<div class='form-wrap'>
+  <div class='form-header'>
+    <div class='form-header-text'>
+      取引先新規登録
+    </div>
+  </div>
+
+  <%#= render 'shared/error_messages', model: f.object %>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">営業担当</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :cust_contact, class:"input-default", id:"cust_contact", placeholder:"例) 佐藤〇〇", maxlength:"40" %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">役職</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :cust_director, class:"input-default", id:"cust_director", placeholder:"例) 佐藤〇〇", maxlength:"40" %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">会社名</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :cust_company, class:"input-default", id:"cust_company", placeholder:"例) 佐藤〇〇", maxlength:"40" %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">住所</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :cust_Address, class:"input-default", id:"cust_Address", placeholder:"例) 佐藤〇〇", maxlength:"40" %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">電話番号</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :cust_phone_number, class:"input-default", id:"cust_phone_number", placeholder:"例）09012345678",maxlength:"11"%>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">ＦＡＸ番号</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :cust_fax_number, class:"input-default", id:"cust_fax_number", placeholder:"例）09012345678",maxlength:"11"%>
+  </div>
+
+  <div class='register-btn'>
+    <%= f.submit "入力データ登録" ,class:"register-red-btn" %>
+  </div>
+
+</div>
+<% end %>
