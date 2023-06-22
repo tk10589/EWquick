@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_06_22_024024) do
+ActiveRecord::Schema.define(version: 2023_06_22_064724) do
 
   create_table "customers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "cust_contact", null: false
@@ -23,6 +23,21 @@ ActiveRecord::Schema.define(version: 2023_06_22_024024) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_customers_on_user_id"
+  end
+
+  create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "item_name", null: false
+    t.string "unit_price", null: false
+    t.string "man_hours", null: false
+    t.string "quantity", null: false
+    t.string "man_hours_unit_prise", null: false
+    t.string "amount_total", null: false
+    t.bigint "preparer_id", null: false
+    t.bigint "customer_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["customer_id"], name: "index_items_on_customer_id"
+    t.index ["preparer_id"], name: "index_items_on_preparer_id"
   end
 
   create_table "preparers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -52,5 +67,7 @@ ActiveRecord::Schema.define(version: 2023_06_22_024024) do
   end
 
   add_foreign_key "customers", "users"
+  add_foreign_key "items", "customers"
+  add_foreign_key "items", "preparers"
   add_foreign_key "preparers", "users"
 end

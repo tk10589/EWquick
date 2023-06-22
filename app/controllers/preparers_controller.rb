@@ -18,7 +18,7 @@ class PreparersController < ApplicationController
   def create
     @preparer = Preparer.new(preparer_params)
     if @preparer.save
-      redirect_to root_path
+      redirect_to preparers_path
     else
       render :new
     end
@@ -31,7 +31,7 @@ class PreparersController < ApplicationController
   def update
     @preparer = Preparer.find(params[:id])
     if @preparer.update(preparer_params)
-      redirect_to root_path
+      redirect_to preparers_path
     else
       render :edit
     end

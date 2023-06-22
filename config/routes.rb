@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: "users#index"
   resources :preparers, only: [:index, :new, :create, :edit, :update]
   resources :customers, only: [:index, :new, :create, :edit, :update]
+  resources :items, only: [:index, :new, :create]
 end
