@@ -1,6 +1,7 @@
 class PreparersController < ApplicationController
   def index
-    
+    @preparers = Preparer.all
+    @users = User.all
   end
 
   def new
@@ -13,6 +14,19 @@ class PreparersController < ApplicationController
       redirect_to root_path
     else
       render :new
+    end
+  end
+
+  def edit
+    @preparer = Preparer.find(params[:id])
+  end
+
+  def update
+    @preparer = Preparer.find(params[:id])
+    if @preparer.update(preparer_params)
+      redirect_to root_path
+    else
+      render :edit
     end
   end
 

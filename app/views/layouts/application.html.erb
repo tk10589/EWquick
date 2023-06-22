@@ -31,7 +31,7 @@
       <div class="menus">
         <div class="menu">
           <div class="menu-name">
-            <a href="#">ホーム</a>
+            <%= link_to "ホーム", root_path %> 
           </div>
         </div>
         <div class="menu">
@@ -44,7 +44,7 @@
       <div class="input_menus">
         <div class="menu">
           <div class="menu-name">
-            <%= link_to "作成者", new_preparer_path, method: :get, class: "item-red-btn" %>
+            <%= link_to "作成者", preparers_path, method: :get, class: "item-red-btn" %>
           </div>
         </div>
         <div class="menu">

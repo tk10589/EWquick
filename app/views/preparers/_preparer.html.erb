@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th class="table__col">会社名</th>
+      <th class="table__col">営業担当者</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @preparers.each do |preparer| %>
+      <tr>
+        <td class="table__col1">
+          <%= link_to preparer.my_company, edit_preparer_path(preparer.id), method: :get %>
+        </td>
+        <td class="table__col2">
+          <%= link_to preparer.my_submitter, edit_preparer_path(preparer.id), method: :get %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
