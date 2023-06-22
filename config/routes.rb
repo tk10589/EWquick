@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "preparers#index"
-  resources :preparers, only: [:new, :create]
+  root to: "users#index"
+  resources :preparers, only: [:index, :new, :create, :edit, :update]
 end
