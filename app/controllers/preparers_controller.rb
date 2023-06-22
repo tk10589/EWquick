@@ -2,6 +2,13 @@ class PreparersController < ApplicationController
   def index
     @preparers = Preparer.all
     @users = User.all
+
+      if @preparers.blank?
+        @preparer = Preparer.new
+        redirect_to new_preparer_path
+      else
+        render :index
+      end
   end
 
   def new
